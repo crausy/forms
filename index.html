@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Űrlap</h1>
+    <form>
+        <fieldset>
+            <legend> Kérdőív </legend>
+            <ul>
+                <li><label for="vezNev"> Vezetéknév: </label><input type="text" name="vezNev" id="vezNev" required></input></li>
+                <li><label for="kerNev"> Keresztnév: </label><input type="text" name="kerNev" id="kerNev" required></input></li>
+                <li><label for="szul">Születési dátum: </label><input type="date" name="szul" id="szul" required></input></li>
+                <li>
+                    <input type="radio" name="neme" id="neme1" required><label for="neme">Férfi</label></input>
+			        <input type="radio" name="neme" id="neme2" required><label for="neme">Nő</label></input>
+			        <input type="radio" name="neme" id="neme3" required><label for="neme">Nem nyilatkozom</label></input>
+                </li>
+                <li><label for="szin">Kedvenc színe: </label><input type="color" name="szin" id="szin"></input></li>
+                <li><label for="kedv">Milyen kedve van?</label><input type="range" name = "kedv" id="kedv" min="1" max="100" value="50"></input></li>
+                <li>
+                    <label for="reggeli">Reggeli</label><input type="checkbox" name="reggeli" id="reggeli">
+                    <label for="tizorai">Tízórai</label><input type="checkbox" name="tizorai" id="tizorai">
+                    <label for="ebed">Ebéd</label><input type="checkbox" name="ebed" id="ebed">
+                    <label for="uzsonna">Uzsonna</label><input type="checkbox" name="uzsonna" id="uzsonna">
+                    <label for="vacsora">Vacsora</label><input type="checkbox" name="vacsora" id="vacsora">
+                </li>
+                <li><label for="file">Töltse fel kedvenc vicces képét: </label><input type="file" name="file" id="file" required></li>
+                <li>
+                    <label for="auto">Kedvenc autója: </label>
+                    <select name="auto" id="auto" required>
+                            <option value="" id="nincs"></option>
+                        <optgroup label="Olasz autók">
+                            <option>Fiat</option>
+                            <option>Ferrari</option>
+                            <option>Alfa romeo</option>
+                        </optgroup>
+                        <optgroup label="Német autók">
+                            <option>Audi</option>
+                            <option>BMW</option>
+                            <option>Mercedes</option>
+                        </optgroup>
+                    </select>
+                </li>
+                <li><textarea name="napom" id="napom" cols="50" rows="5" required placeholder="Mesélje el a napját: "></textarea></li>
+                <li><input type="submit" value="Kész!"></li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <style>
+        body
+        {
+            background-color: powderblue;
+        }
+        h1
+        {
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        li
+        {
+            list-style: none;
+            padding: 10px;
+        }
+
+        label
+        {
+            padding: 5px;
+        }
+
+        form
+        {
+            transition: 0.3s ease-in-out;
+        }
+
+        form:hover
+        {
+            background: khaki;
+            font-size: 110%;
+        }
+
+        #kedv
+        {
+            -webkit-appearance: none;
+            width: 500px;
+            height: 15px;
+            border-radius: 5px;  
+            background: #2c2929;
+            outline: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        #kedv:hover
+        {
+            background: mediumpurple;
+        }
+
+        #kedv::-webkit-slider-thumb
+        {
+            -webkit-appearance: none;
+
+            width: 25px;
+            height: 25px;
+            border-radius: 50%; 
+            background: lightskyblue;
+            cursor: pointer;
+        }
+
+        #kedv::-moz-range-thumb
+        {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: lightskyblue;
+            cursor: pointer;
+        }
+
+        #nincs
+        {
+            visibility: hidden;
+        }
+
+    </style>
+</body>
+</html>
